@@ -1,0 +1,26 @@
+rake db:create:all => creates db for all env
+rake db:create =>     creates db for current env
+rake db:drop  => drops db for current env
+rake db:drop:all => drops db for all env
+rake db:migrate => runs migration for current env
+rake db:migrate:up => run specific migration
+rake db:migrate:down => run specific rollback
+rake db:migrate:status => show current migration status
+rake db:rollback => rollsback the last migration
+rake db:seed => creates seed file
+rake db:setup runs db:schema:load db:seed (wipes data)
+
+rails s (start server) rails s -h (options)
+
+
+scaffold :
+
+rails g scaffold Project title:string description:text percent_complete:
+
+model:
+
+rails g model Task title:string description:txt project:references
+
+migration:
+
+rails g migration add_completed_to_tasks completed:boolean
