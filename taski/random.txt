@@ -24,3 +24,10 @@ rails g model Task title:string description:txt project:references
 migration:
 
 rails g migration add_completed_to_tasks completed:boolean
+
+rails g migration change_data_type_for_stage (convention)
+
+rails g migration remove_columnname_from_tableName
+
+(rails g migration add_column_name_to_model column_name:data_type)
+(for model = singular for controllers = plural)
