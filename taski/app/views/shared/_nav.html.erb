@@ -3,3 +3,11 @@
 <%= link_to "contact us" , contact_path%>
 <%= link_to "projects" , projects_path%>
 <%= link_to "blog" , blog_path%>
+ <% if current_user %>
+   <%= link_to "Signout", destroy_user_session_path, method: :delete %>
+   <%= link_to "Edit User", edit_user_registration_path %>
+<% else %>
+	<%= link_to "signin", new_user_session_path %>	
+	<%= link_to "Register", new_user_registration_path %>	
+
+<%  end  %>
